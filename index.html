@@ -137,17 +137,23 @@
 
       .education-entry {
         display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 16px;
         margin-bottom: 24px;
       }
 
       .university-logo {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         object-fit: contain;
         flex-shrink: 0;
       }
+
+    .education-entry h3,
+    .education-entry p {
+      margin: 0;
+    }
       
     }
   </style>
