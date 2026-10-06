@@ -6,6 +6,10 @@
   <title>Ashley Hee-Yeon Kim</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #faf9f6;
@@ -15,20 +19,9 @@
     }
 
     main {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 24px;
-    }
-
-    h1 {
-      margin-bottom: 0;
-      font-size: 36px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #d9ded9;
-      padding-bottom: 8px;
+      max-width: 1050px;
+      margin: 50px auto;
+      padding: 0 28px;
     }
 
     a {
@@ -38,8 +31,8 @@
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      margin: 24px 0 40px;
+      gap: 12px 24px;
+      margin-bottom: 45px;
     }
 
     nav a {
@@ -47,67 +40,197 @@
       font-weight: bold;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .introduction {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 45px;
+      align-items: start;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .status {
+      margin: 0;
+      color: #59665e;
+    }
+
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #d9ded9;
+      font-size: 24px;
+    }
+
+    .profile {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+    }
+
+    .education-entry {
+      margin-bottom: 24px;
+    }
+
+    .education-entry h3 {
+      margin-bottom: 4px;
+      font-size: 18px;
+    }
+
+    .education-entry p {
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
     footer {
       margin-top: 60px;
-      font-size: 14px;
+      padding-top: 20px;
+      border-top: 1px solid #d9ded9;
       color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        margin-top: 28px;
+        padding: 0 20px;
+      }
+
+      .introduction {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .profile {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <header>
-      <h1>Ashley Hee-Yeon Kim</h1>
-      <p>PhD Student · Linguistics and Cognitive Science</p>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="./publications.html">Publications</a>
+      <a href="./presentations.html">Presentations</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <div class="introduction">
+      <div>
+        <header>
+          <h1>Ashley Hee-Yeon Kim</h1>
+          <p class="status">
+            PhD Student in Linguistics and Cognitive Science<br>
+            University of Delaware
+          </p>
+        </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a PhD student in Linguistics and Cognitive Science
-        at the University of Delaware.
-      </p>
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            I am a PhD student in Linguistics and Cognitive Science
+            at the University of Delaware.
+          </p>
+          <p>
+            Add more about your research interests and background here.
+          </p>
+        </section>
+      </div>
+
+      <img
+        class="profile"
+        src="./IMG_6846.jpeg"
+        alt="Ashley Hee-Yeon Kim"
+      >
+    </div>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="education-entry">
+        <h3>University of Delaware</h3>
+        <p>PhD in Linguistics and Cognitive Science — in progress</p>
+        <!-- Add your start year here if you wish. -->
+      </div>
+
+      <!-- Replace these placeholders with your degree information. -->
+      <div class="education-entry">
+        <h3>[University name]</h3>
+        <p>[Previous degree, field, and year]</p>
+      </div>
     </section>
 
     <section id="research">
       <h2>Research</h2>
       <p>
-        Add a short description of your research interests here.
-        You can also list your current projects, publications,
-        and conference presentations.
+        Add a description of your research interests and current
+        projects here.
       </p>
     </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
+    <section id="photos">
+      <h2>Photos</h2>
 
-    <img
-    src="./IMG_6846.jpeg"
-    alt="Ashley Hee-Yeon Kim"
-    style="width: 200px; max-width: 100%; height: auto; border-radius: 12px;"
-    >
+      <!-- Add descriptive alt text for each photograph. -->
+      <div class="gallery">
+        <img src="./IMG_4815.jpeg" alt="" loading="lazy">
+        <img src="./IMG_0914.jpeg" alt="" loading="lazy">
+        <img src="./IMG_0379.jpeg" alt="" loading="lazy">
+        <img src="./IMG_8798.jpeg" alt="" loading="lazy">
+      </div>
+    </section>
 
-    <p>
-    Email:
-    <a href="mailto:heeyeon@udel.edu">heeyeon@udel.edu</a>
-    </p>
-
-    <p>
-    Phone:
-    <a href="tel:+13029811944">302-981-1944</a>
-    </p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:heeyeon@udel.edu">heeyeon@udel.edu</a>
+      </p>
+      <p>
+        Phone:
+        <a href="tel:+13029811944">302-981-1944</a>
+      </p>
+    </section>
 
     <footer>
-      <p>Ashley Hee-Yeon Kim</p>
+      Ashley Hee-Yeon Kim
     </footer>
   </main>
 </body>
+</html>
 </html>
