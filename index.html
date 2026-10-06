@@ -10,6 +10,20 @@
       box-sizing: border-box;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0, 240px));
+      gap: 20px;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      border-radius: 12px;
+    }
+
     body {
       margin: 0;
       background: #faf9f6;
@@ -117,17 +131,6 @@
 
       h1 {
         font-size: 30px;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
-        justify-content: start;
-      }
-
-      .gallery img {
-        width: 100%;
-        max-width: 240px;
-        height: auto;
       }
     }
   </style>
