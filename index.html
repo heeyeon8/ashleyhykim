@@ -115,12 +115,19 @@
         margin: 0 auto;
       }
 
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
       h1 {
         font-size: 30px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
+        justify-content: start;
+      }
+
+      .gallery img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
       }
     }
   </style>
